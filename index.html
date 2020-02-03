@@ -7,22 +7,49 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#">Информация</a></li>
-        <li><a href="#">Новости</a></li>
-        <li><a href="#">Прайс-лист</a></li>
-        <li><a href="#">Магазин</a></li>
-        <li><a href="#">Контакты</a></li>
+  <header class="main-header">
+    <nav class="main-nav">
+      <a class="main-nav-logo" href="/">
+        <img src="img/index-logo.svg" width="371" height="155" alt="Логотип Барбершопа Бородинский">
+      </a>
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a href="#">Информация</a></li>
+        <li class="main-nav__item"><a href="#">Новости</a></li>
+        <li class="main-nav__item"><a href="#">Прайс-лист</a></li>
+        <li class="main-nav__item"><a href="#">Магазин</a></li>
+        <li class="main-nav__item"><a href="#">Контакты</a></li>
       </ul>
-      <button>Вход</button>
+      <ul class="user-nav__list">
+        <li>
+          <a class="user-nav__item" href="login.html">Вход</a>
+        </li>
+      </ul>
     </nav>
-    <a>
-      <img src="img/logo.img" width="300" height="200" alt="Барбершоп Юородинский">
-    </a>
   </header>
   <main>
+    <section class="modal modal__login">
+      <h2>Личный кабинет</h2>
+      <p>Введите свой логин и пароль</p>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="login__icon--user">
+          <label class="visually-hidden" for="user-login">Логин</label>
+          <input class="login__icon--user" id="user-login" type="text" name="login" placeholder="Логин">
+        </p>
+        <p class="login__icon--password">
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input class="login__icon--password" id="user-password" type="password" name="password" placeholder="Пароль">
+        </p>
+        <p class="login-password-info">
+          <label class="login-checkbox">
+            <input type="checkbox" id="remember" name="remember">
+            Запомнить меня
+          </label>
+          <a class="restore" href="#">Я забыл пароль!</a>
+        </p>
+        <button class="button" type="submit">Войти</button>
+      </form>
+      <button class="modal__close" type="button">Закрыть</button>
+    </section>
     <h1>Барбершоп Бородинский</h1>
     <section>
       <ul>
@@ -30,8 +57,8 @@
           <h2>
             Быстро
           </h2>
-          <p>Мы делаем свою работу быстро! Два часа<br>
-            пролетят незаметно и вы - счастливый<br>
+          <p>Мы делаем свою работу быстро! Два часа
+            пролетят незаметно и вы - счастливый
             обладатель стильной стрижки -минутки!
           </p>
         </li>
@@ -39,8 +66,8 @@
           <h2>
             Круто
           </h2>
-          <p>Забудьте, как вы стриглись раньше.<br>
-            Мы сделаем из вас здвезду футбола или кино!<br>
+          <p>Забудьте, как вы стриглись раньше.
+            Мы сделаем из вас здвезду футбола или кино!
             Во всяком случае внешне.
           </p>
         </li>
@@ -48,8 +75,8 @@
           <h2>
             Дорого
           </h2>
-          <p>Наши мастера - профессионалы своего дела и<br>
-            не могут стоить дешево. К тому же, разве цена<br>
+          <p>Наши мастера - профессионалы своего дела и
+            не могут стоить дешево. К тому же, разве цена
             не дает определенный статус?
           </p>
         </li>
@@ -59,14 +86,14 @@
       <h2>Новости</h2>
       <ul>
         <li>
-          <p>Нам наконец-то завезли Ягермейстер! Теперь вы можете<br>
+          <p>Нам наконец-то завезли Ягермейстер! Теперь вы можете
             пропустиnm cnfrfyxbr dj dhtvz cnhb;rb
           </p>
           <time datetime="2020.01.11">11 января</time>
         </li>
         <li>
-          <p>В нашей команде поплнение, Борис "Бритва" стригунец,<br>
-            обладатель множества титулов и наград поплнил наши<br>
+          <p>В нашей команде поплнение, Борис "Бритва" стригунец,
+            обладатель множества титулов и наград поплнил наши
             стройные ряды
           </p>
           <time datetime="2020.01.18">18 января</time>
@@ -74,17 +101,15 @@
       </ul>
       <a href="news.html">Все новости</a>
     </section>
-    <section>
+    <section class="gallery">
       <h2>Фотогалерея</h2>
-      <ul>
-        <li>
-          <a href="#">
-            <img src="img/studio.img">
-          </a>
-        </li>
-      </ul>
-      <button type="button">Назад</button>
-      <button type="button">Вперед</button>
+      <figure class="gallery__item">
+        <a href="#">
+          <img src="img/studio.jpg" width="286" height="164" alt="Интерьер">
+        </a>
+      </figure>
+      <button class="button gallery__button gallery__button-back" type="button">Назад</button>
+      <button class="button gallery__button gallery__button-next" type="button">Вперед</button>
     </section>
     <section>
       <h2>Контактная информация</h2>
@@ -99,35 +124,43 @@
         СБ-ВС: с 10:00 до 19:00
       </p>
       <a href="map.html">Как проехать</a>
+      <section class="modal modal-map">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <p>
+          <img src="img/map.jpg" width="776" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </p>
+        <button class="modal-close" type="button">Закрыть</button>
+        <!--Есть отличие с дизайном, там просто крестик, но это будем делать с помощью CSS, чтобы скринридеры смогли понять, для чего кнопка-->
+      </section>
       <!--открывается карта-->
       <a href="feedback.html">Обратная связь</a>
       <!--открывается форма обратной связи-->
     </section>
-    <section>
+    <section class="appointment">
       <h2>Записаться</h2>
-      <p>
-        Укажите желаемую дату и время и мы свяжемся<br>
-        с вами для подтверждения брони
+      <p class="appointment__text">
+        Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони
       </p>
-      <ul>
-        <li>
-          <p>Дата</p>
-          <input type="date">
-        </li>
-        <li>
-          <p>Время</p>
-          <input type="time">
-        </li>
-        <li>
-          <p>Ваше имя</p>
-          <input type="text">
-        </li>
-        <li>
-          <p>Телефон</p>
-          <input type="tel">
-        </li>
-      </ul>
-      <button type="submit">Отправить</button>
+      <form class="appointment__form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="appointment__item">
+          <label for="appointment-date">Дата</label>
+        </p>
+        <input id="appointment-date" type="text" name="date" value="" placeholder="08.10.2017">
+        <p class="appointment__item">
+          <label for="appointment-time">Время</label>
+        </p>
+        <input id="appointment-time" type="text" name="time" value="" placeholder="10:00">
+        <p class="appointment__item">
+          <label for="appointment-name">Ваше имя</label>
+        </p>
+        <input id="appointment-name" type="text" name="name" value="" placeholder="Борода">
+        <p class="appointment__item">
+          <label for="appointment-tel">Телефон</label>
+        </p>
+        <input id="appointment-tel" type="tel" name="phone" value="" placeholder="+7 123 456-78-90">
+        <p class="appointment__item">
+          <button class="button" type="submit">Отправить</button>
+      </form>
     </section>
   </main>
   <footer>
@@ -135,6 +168,14 @@
       Барбершоп "Бородинский"<br>
       Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
       <a href="map.html">Как нас найти?</a><br>
+      <section class="modal modal-map">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <p>
+          <img src="img/map.jpg" width="776" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </p>
+        <button class="modal-close" type="button">Закрыть</button>
+        <!--Есть отличие с дизайном, там просто крестик, но это будем делать с помощью CSS, чтобы скринридеры смогли понять, для чего кнопка-->
+      </section>
       Телефон: +7 (495) 666-02-66
     </p>
     <p>Давайте дружить!</p>
@@ -146,9 +187,6 @@
     <p>Разработано:</p>
     <a href="htmlacademy.ru/"></a>
   </footer>
-  <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a
-      href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
 </body>
 
 </html>
